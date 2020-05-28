@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>998</width>
+    <height>712</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>880</width>
+    <height>580</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+	background: rgb(59, 68, 76);
+}
+QPushButton:hover{
+	background-color:rgb(146, 132, 189);
+}
+QPushButton:pressed{
+	background-color: radial-gradient(rgb(146, 132, 189), rgb(137, 126, 180), rgb(128, 120, 170), rgb(120, 114, 161), rgb(111, 108, 152), rgb(102, 102, 143), rgb(93, 95, 133), rgb(84, 89, 124), rgb(75, 83, 115), rgb(67, 77, 106), rgb(58, 71, 96), rgb(49, 65, 87));
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="list">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>240</y>
+      <width>671</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableWidget{
+	background: rgb(115, 128, 158);
+	color: rgb(240, 240, 240);
+	opacity: 0.6;
+}</string>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="showGrid">
+     <bool>false</bool>
+    </property>
+    <property name="cornerButtonEnabled">
+     <bool>false</bool>
+    </property>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>70</number>
+    </attribute>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderStretchLastSection">
+     <bool>false</bool>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="filterMarks_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>130</y>
+      <width>301</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="filterMarks">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	color: rgb(235, 235, 235);
+	font-weight: bold;
+}</string>
+         </property>
+         <property name="text">
+          <string> Range:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	color: rgb(235, 235, 235);
+	font-weight: bold;
+}</string>
+         </property>
+         <property name="text">
+          <string>From</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="fromMark">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QDoubleSpinBox{
+	background: rgb(115, 128, 158);
+	border: 1px solid rgb(115, 128, 158);
+	height: 30px;
+	border-radius: 0px;
+	color: #fff;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	color: rgb(235, 235, 235);
+	font-weight: bold;
+}</string>
+         </property>
+         <property name="text">
+          <string>To</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="toMark">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QDoubleSpinBox{
+	background: rgb(115, 128, 158);
+	border: 1px solid rgb(115, 128, 158);
+	height: 30px;
+	border-radius: 0px;
+	color: #fff;
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="filterMarksB">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	border: 1px solid black;
+	border-radius: 10px;
+	height: 50px;
+	background: rgb(94, 105, 115);
+	color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+	background-color:rgb(146, 132, 189);
+}
+QPushButton:pressed{
+	background-color: radial-gradient(rgb(146, 132, 189), rgb(137, 126, 180), rgb(128, 120, 170), rgb(120, 114, 161), rgb(111, 108, 152), rgb(102, 102, 143), rgb(93, 95, 133), rgb(84, 89, 124), rgb(75, 83, 115), rgb(67, 77, 106), rgb(58, 71, 96), rgb(49, 65, 87));
+}</string>
+       </property>
+       <property name="text">
+        <string>Filter by marks</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="filterDate_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>90</y>
+      <width>221</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="filterDate">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	color: rgb(235, 235, 235);
+	font-weight: bold;
+}</string>
+         </property>
+         <property name="text">
+          <string>   Year:     </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="yearToShow">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	background: rgb(115, 128, 158);
+	border: 1px solid rgb(115, 128, 158);
+	border-radius: 5px;
+	height: 30px;
+	color: #fff;
+	cursor-color:#fff;
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	color: rgb(235, 235, 235);
+	font-weight: bold;
+}</string>
+         </property>
+         <property name="text">
+          <string>   Month:   </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="monthToShow">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	background: rgb(115, 128, 158);
+	border: 1px solid rgb(115, 128, 158);
+	border-radius: 5px;
+	height: 30px;
+	color: #fff;
+	cursor-color:#fff;
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="filterDateB">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	border: 1px solid black;
+	border-radius: 10px;
+	height: 50px;
+	background: rgb(94, 105, 115);
+	color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+	background-color:rgb(146, 132, 189);
+}
+QPushButton:pressed{
+	background-color: radial-gradient(rgb(146, 132, 189), rgb(137, 126, 180), rgb(128, 120, 170), rgb(120, 114, 161), rgb(111, 108, 152), rgb(102, 102, 143), rgb(93, 95, 133), rgb(84, 89, 124), rgb(75, 83, 115), rgb(67, 77, 106), rgb(58, 71, 96), rgb(49, 65, 87));
+}</string>
+       </property>
+       <property name="text">
+        <string>Filter by date</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="StudentDel_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>190</y>
+      <width>281</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="StudentDel">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	color: rgb(235, 235, 235);
+	font-weight: bold;
+}</string>
+         </property>
+         <property name="text">
+          <string>      First Name</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="fNameToDel">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	background: rgb(115, 128, 158);
+	border: 1px solid rgb(115, 128, 158);
+	border-radius: 5px;
+	height: 30px;
+	color: #fff;
+	cursor-color:#fff;
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	color: rgb(235, 235, 235);
+	font-weight: bold;
+}</string>
+         </property>
+         <property name="text">
+          <string>      Last Name </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lNameTodel">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	background: rgb(115, 128, 158);
+	border: 1px solid rgb(115, 128, 158);
+	border-radius: 5px;
+	height: 30px;
+	color: #fff;
+	cursor-color:#fff;
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="delMember">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	border: 1px solid black;
+	border-radius: 10px;
+	height: 50px;
+	background: rgb(94, 105, 115);
+	color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+	background-color:rgb(146, 132, 189);
+}
+QPushButton:pressed{
+	background-color: radial-gradient(rgb(146, 132, 189), rgb(137, 126, 180), rgb(128, 120, 170), rgb(120, 114, 161), rgb(111, 108, 152), rgb(102, 102, 143), rgb(93, 95, 133), rgb(84, 89, 124), rgb(75, 83, 115), rgb(67, 77, 106), rgb(58, 71, 96), rgb(49, 65, 87));
+}</string>
+       </property>
+       <property name="text">
+        <string>Delete from list</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="studentIn_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>380</y>
+      <width>281</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <layout class="QVBoxLayout" name="studentIn">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	color: rgb(235, 235, 235);
+	font-weight: bold;
+}</string>
+         </property>
+         <property name="text">
+          <string>      First Name</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="fName">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="tabletTracking">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	background: rgb(115, 128, 158);
+	border: 1px solid rgb(115, 128, 158);
+	border-radius: 5px;
+	height: 30px;
+	color: #fff;
+	cursor-color:#fff;
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	color: rgb(235, 235, 235);
+	font-weight: bold;
+}</string>
+         </property>
+         <property name="text">
+          <string>      Last Name </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lName">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="tabletTracking">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	background: rgb(115, 128, 158);
+	border: 1px solid rgb(115, 128, 158);
+	border-radius: 5px;
+	height: 30px;
+	color: #fff;
+	cursor-color:#fff;
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	color: rgb(235, 235, 235);
+	font-weight: bold;
+}</string>
+         </property>
+         <property name="text">
+          <string>      Birdthday   </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="dateEdit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="tabletTracking">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QDateEdit{
+	background: rgb(115, 128, 158);
+	border: 1px solid rgb(115, 128, 158);
+	height: 30px;
+	border-radius: 0px;
+	color: #fff;
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	color: rgb(235, 235, 235);
+	font-weight: bold;
+}</string>
+         </property>
+         <property name="text">
+          <string>      Marks         </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="marks">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="tabletTracking">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	background: rgb(115, 128, 158);
+	border: 1px solid rgb(115, 128, 158);
+	border-radius: 5px;
+	height: 30px;
+	color: #fff;
+	cursor-color:#fff;
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="addMember">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	border: 1px solid black;
+	border-radius: 10px;
+	height: 50px;
+	background: rgb(94, 105, 115);
+	color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+	background-color:rgb(146, 132, 189);
+}
+QPushButton:pressed{
+	background-color: radial-gradient(rgb(146, 132, 189), rgb(137, 126, 180), rgb(128, 120, 170), rgb(120, 114, 161), rgb(111, 108, 152), rgb(102, 102, 143), rgb(93, 95, 133), rgb(84, 89, 124), rgb(75, 83, 115), rgb(67, 77, 106), rgb(58, 71, 96), rgb(49, 65, 87));
+}</string>
+       </property>
+       <property name="text">
+        <string>Add to the list</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="resetB">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>50</y>
+      <width>101</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 1px solid black;
+	border-radius: 50px;
+	height: 50px;
+	background: rgb(94, 105, 115);
+	color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+	background-color:rgb(146, 132, 189);
+}
+QPushButton:pressed{
+	background-color: radial-gradient(rgb(146, 132, 189), rgb(137, 126, 180), rgb(128, 120, 170), rgb(120, 114, 161), rgb(111, 108, 152), rgb(102, 102, 143), rgb(93, 95, 133), rgb(84, 89, 124), rgb(75, 83, 115), rgb(67, 77, 106), rgb(58, 71, 96), rgb(49, 65, 87));
+}</string>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="logo">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>240</width>
+      <height>240</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>998</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFilter">
+    <property name="title">
+     <string>Filter</string>
+    </property>
+    <addaction name="actionBy_date"/>
+    <addaction name="actionBy_marks"/>
+   </widget>
+   <addaction name="menuFilter"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionDelete">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionBy_date">
+   <property name="text">
+    <string>By date</string>
+   </property>
+  </action>
+  <action name="actionBy_marks">
+   <property name="text">
+    <string>By marks</string>
+   </property>
+  </action>
+  <action name="actionSort_List">
+   <property name="text">
+    <string>Sort List</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
